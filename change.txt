@@ -1,0 +1,11 @@
+ALTER TABLE `customers` ADD `A_ID` VARCHAR(25) NOT NULL AFTER `S_ID`;
+ALTER TABLE `products` ADD `A_ID` VARCHAR(25) NOT NULL AFTER `P_ID`;
+ALTER TABLE `salesmen` ADD `A_ID` VARCHAR(25) NOT NULL AFTER `S_ID`;
+ALTER TABLE `supplied` ADD `A_ID` VARCHAR(25) NOT NULL AFTER `S_ID`;
+ALTER TABLE `supplier` ADD `A_ID` VARCHAR(25) NOT NULL AFTER `S_ID`;
+remove T_ID from transaction table...!!
+ALTER TABLE `transaction` ADD `A_ID` VARCHAR(25) NOT NULL FIRST;
+ALTER TABLE `workers` ADD `A_ID` VARCHAR(25) NOT NULL AFTER `W_ID`;
+ALTER TABLE `admin` CHANGE `Email` `Email` TEXT NOT NULL;
+INSERT INTO `admin` (`User_ID`, `Name`, `Company_Name`, `Password`, `Mobile`, `Email`) VALUES ('Preet', 'Preet Nagadia', 'TanishQ', '123456789', '9426818926', 'nagadiapreet@gmail.com');
+UPDATE `customers` SET `A_ID` = 'Preet' WHERE `customers`.`C_ID` = 'C101';
